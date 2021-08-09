@@ -1,0 +1,21 @@
+I decided to do an Assemble and Load method which uses a .pasm file browser 
+to use Assemble.assembler method and print out any errors with a pop-up screen. 
+In the next step, I used Loader.load to check if the output (.pexe) file has 
+run-time errors. If there is an error, the program returns a pop-up screen
+indicating the error.I put my assembleLoadFile method to FilesMgr.java to 
+maintain a synergy with other aspects of the program (private currentlyExecutingFile
+field to use Reload function appropriately). I also made the assembleLoadFile to return
+a boolean value rather than a void type, to safely terminate the method by returning a false value.
+
+For the second phase, inside the JobViewPanel, I added an assembleLoadJob method which is very similar
+to loadJob method. Only difference is that I used FilesMgr.assembleLoadFile method after clearJob() to assemble. 
+Lastly, update("Load Code") to fill Code Memory and Data Memory views in the GUI.
+
+Assemble and Load button's main attribute is to work faster at the times
+when the user wants to write a .pexe file and load at the same time. Works
+ efficiently especially if the user has to make many tests with their codes.
+
+Things I would add:
+*Toggle auto-execute feature (Bunny option + toggle run pretty much does the same thing, but a little messy).
+*Highlight feature for data memory view that highlights the last row that a change happened.
+*Ability to fill multiple job fields with one button.

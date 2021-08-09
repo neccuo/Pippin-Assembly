@@ -1,0 +1,9 @@
+LOD 1
+SUB 2
+STO 3
+LOD 2
+DIV 3
+HALT
+DATA 
+1 23
+2 23
